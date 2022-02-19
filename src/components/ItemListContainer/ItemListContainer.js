@@ -20,17 +20,17 @@ const ItemListContainer = () => {
             });
     }, []);
   return( 
-  <>
+  <div>
   {loading ?(
     <h1>Cargando...</h1>
   ) :(
     <>
-    <h2 style={{ color: "purple", backgroundColor: "black" }}>Hola amigxs de Devendra</h2>
+    <h2 style={{ color: "purple" }}>Hola amigxs de Devendra</h2>
   <ItemList products={products}/>
   <ItemCount/>
   </>
   )}
-</>
+</div>
   );
 };
 

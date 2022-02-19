@@ -18,8 +18,8 @@ const ItemCount = () => {
     <div className="contador">
             <h3>Cantidad</h3>
             <p>{counter}</p>
-            <button onClick={counterUP}>+</button>
-            <button onClick ={counterDown}>-</button>
+            <button style={{width:'50px'}} onClick={counterUP}>+</button>
+            <button style={{width:'50px'}} onClick ={counterDown}>-</button>
         </div>
   )
 }
