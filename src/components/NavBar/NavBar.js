@@ -1,16 +1,16 @@
-import React from 'react';
+import { Link } from "react-router-dom";
 import './NavBar.css';
-import CartWidget from '../CartWidget/CartWidget';
+// import CartWidget from '../CartWidget/CartWidget';
+// import { Link } from '@mui/material';
 
 const Navbar = () => {
   return <div>
       <nav className="container">
       <ul className='naveg'>
-        <li className='naveg'>Devendra</li>
-        <li className='naveg'>Sobre mi</li>
-        <li className='naveg'>Sahumerios</li>
-        <li className='naveg'>Adornos</li>
-        <CartWidget />
+        <Link className='naveg' to='/'>Devendra</Link>
+        <Link className='naveg' to='/category/:id'>Sahumerios</Link>
+        <Link className='naveg' to='/item/:id'>Detalle</Link>
+        {/* <CartWidget /> */}
       </ul>
     </nav>
   </div>;
