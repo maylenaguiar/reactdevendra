@@ -12,7 +12,6 @@ const ItemDetailContainer = () => {
           .then((res) => {
           setItem(res);
           setLoading(!loading);
-          console.log(res);
         })
           .catch((error) => {
             console.log(error);
