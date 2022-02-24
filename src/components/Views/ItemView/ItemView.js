@@ -7,7 +7,7 @@ const ItemView = () => {
     console.log('params', params)
     return (
         <div>
-            <ItemDetailContainer itemId={params.id}/>
+            <ItemDetailContainer />
         </div>
     )
 }

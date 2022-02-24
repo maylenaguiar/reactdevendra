@@ -1,30 +1,34 @@
 import React, { useEffect, useState } from 'react';
-import { traerProductos } from '../../data/productos';
+import { traerProducto } from '../../data/productos';
 import ItemDetail from './ItemDetail';
+import { useContext } from 'react';
+import { CartContext } from '../CartContext/CartContext';
+import { useParams } from 'react-router-dom';
 
+ 
 const ItemDetailContainer = () => {
 
-  const [item, setItem]= useState([]);
+  const [item, setItem]= useState();
   const [loading, setLoading] = useState(true)
-
+  let { productId } = useParams()
+ 
+  console.log({productID: productId})
     useEffect(() => {
-        traerProductos
-          .then((res) => {
-          setItem(res);
-          setLoading(!loading);
-        })
-          .catch((error) => {
-            console.log(error);
+        traerProducto(productId).then(item => {
+          setItem(item);
+          setLoading(false);
+        }).catch(error=> {
+        console.log(error);
         })
     }, []);
     
   return (
     <>
-       {loading ?(
+       {loading ?
         <p>Cargando detalle de producto.</p>
-       ):(
+       :
       <ItemDetail item={item} />
-       )}     
+       }     
    </> 
   );
 };

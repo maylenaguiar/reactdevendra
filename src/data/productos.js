@@ -27,3 +27,12 @@ export const traerProductos = new Promise((resolve, reject) => {
         resolve(products);
     }, 2000);
 });
+
+export const traerProducto = (id)=>{
+    return new Promise((res)=>{
+        const product = products.find(p=> p.id == id)
+        setTimeout(()=>{
+            res(product)
+        }, 2000)
+    })
+}

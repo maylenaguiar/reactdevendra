@@ -27,7 +27,6 @@ const ItemListContainer = () => {
     <>
     <h2 style={{ color: "purple" }}>Hola amigxs de Devendra</h2>
   <ItemList products={products}/>
-  <ItemCount/>
   </>
   )}
 </div>
