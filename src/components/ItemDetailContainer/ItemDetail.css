@@ -1,0 +1,25 @@
+.contador{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    margin-left: 40%;
+    padding: 20px;
+    width: 100px;
+}
+.botones{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.detalle{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.detalleImg{
+    width:300px;
+    margin-left: 40%;
+}

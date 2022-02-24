@@ -3,6 +3,7 @@ import { products } from '../../data/productos';
 import { CartContext } from '../CartContext/CartContext';
 import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
+import './ItemDetail.css';
 
 const ItemDetail = ({item}) => {
   const {cart, setCart} = useContext(CartContext);
@@ -19,19 +20,22 @@ const ItemDetail = ({item}) => {
 console.log(addCart);
 }
   return (
-    <div>
+    <div className='detalle'>
 		<h3>{item.name}</h3>
         <h4>${item.price}</h4>
-        <img style ={{width:'300px'}}  src={item.img} alt='imagen'/>
+        <img className='detalleImg' src={item.img} alt='imagen del producto'/>
         <ItemCount counter={counter}
         setCounter={setCounter} 
         onAdd={handleAdd}/>
-        <button className='contador' onClick={handleAdd}>Agregar</button>
-        <button className='contador'>Eliminar</button>
-        <Link to ='/Cart'> <button className='contador'>Finalizar Compra</button>
+        <div className='botones'>
+        <button onClick={handleAdd}>Agregar</button>
+        <button>Eliminar</button>
+        <Link to ='/Cart'> <button>Finalizar Compra</button>
         </Link>
+        </div>
+        
     </div>
   )
 }
-
+ 
 export default ItemDetail
