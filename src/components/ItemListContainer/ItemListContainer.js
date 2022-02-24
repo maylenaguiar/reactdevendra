@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { traerProductos } from '../../data/productos';
 import ItemCount from '../ItemCount/ItemCount';
 import ItemList from '../ItemList/ItemList';
+import './ItemListContainer.css';
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
@@ -25,7 +26,7 @@ const ItemListContainer = () => {
     <h1>Cargando...</h1>
   ) :(
     <>
-    <h2 style={{ color: "purple" }}>Hola amigxs de Devendra</h2>
+    <h2 className='titulo'>Hola amigxs de Devendra</h2>
   <ItemList products={products}/>
   </>
   )}

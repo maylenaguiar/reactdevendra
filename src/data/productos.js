@@ -20,6 +20,13 @@ export const products = [
         price: 300,
         img: 'https://http2.mlstatic.com/D_NQ_NP_2X_798905-MLA47892959853_102021-F.webp'
     },
+    {
+        id: 4,
+        name: 'Mix Pétalos ',
+        stock: 15,
+        price: 150,
+        img: 'https://http2.mlstatic.com/D_NQ_NP_701533-MLA42244387851_062020-V.jpg'
+    },
 ];
 
 export const traerProductos = new Promise((resolve, reject) => {
