@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import './ItemCount.css';
 
-const ItemCount = () => {
-    const [counter, setCounter, onAdd] = useState(0);
+const ItemCount = ({ onAdd }) => {
+    const [counter, setCounter] = useState(0);
 
     const counterUP = () =>{
         if (counter < 15){
@@ -19,6 +19,7 @@ const ItemCount = () => {
             <h3>Cantidad</h3>
             <p>{counter}</p>
             <button style={{width:'50px'}} onClick={counterUP}>+</button>
+            <button onClick={()=>{onAdd(counter)}}> Agregar al carrito</button>
             <button style={{width:'50px'}} onClick ={counterDown}>-</button>
         </div>
   )

@@ -8,13 +8,14 @@ import ItemView from '../src/components/Views/ItemView/ItemView';
 import Category from '../src/components/Views/Category/Category';
 import { CartProvider } from '../src/components/CartContext/CartContext';
 import Cart from './components/Cart/Cart';
+// import Header from '../src/components/Header/Header'
 
 function App() {
   return (
     <Router> 
       <CartProvider>
     <div className="App">
-       <NavBar />
+      <NavBar />
     </div>
        <Routes>
        <Route path='/' element={<Home />}/>

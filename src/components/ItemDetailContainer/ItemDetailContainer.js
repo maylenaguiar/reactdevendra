@@ -12,7 +12,6 @@ const ItemDetailContainer = () => {
   const [loading, setLoading] = useState(true)
   let { productId } = useParams()
  
-  console.log({productID: productId})
     useEffect(() => {
         traerProducto(productId).then(item => {
           setItem(item);
