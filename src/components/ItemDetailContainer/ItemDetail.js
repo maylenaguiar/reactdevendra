@@ -1,30 +1,20 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { products } from '../../data/productos';
 import { CartContext } from '../CartContext/CartContext';
 import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
-import { useState } from 'react';
 
 const ItemDetail = ({item}) => {
+  const [quantity, setQuantity] = useState(0)
   const {cart, setCart} = useContext(CartContext);
   const { addCart, removeCart}= useContext(CartContext);
   const {counter, setCounter} = useContext(CartContext);
 
-  const [quantity, setQuantity] = useState(0)
   const onAdd = (qty)=>{
     setQuantity(qty)
-  }
-
-//   const handleAdd = () => {
-//     if (counter > 0){
-//         addCart({ 
-//           id:
-//           item.price
-//         });
-//     };
-// console.log(addCart);
-// }
+    addCart(item, qty);
+  };
   return (
     <div className='detalle'>
 		<h3>{item.name}</h3>
