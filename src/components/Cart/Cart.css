@@ -1,0 +1,17 @@
+.elementoCarrito{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: purple;
+}
+
+.compra{
+    text-align: center;
+    color: purple;
+}
+.botonVaciar{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-left: 48%;
+}

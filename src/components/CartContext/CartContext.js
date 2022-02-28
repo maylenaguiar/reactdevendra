@@ -24,11 +24,18 @@ export const CartProvider = ({ children }) => {
 	};
 	
 	const removeCart = (id) =>{
-	const remove = cart.filter((i) => i.referencia !== id);
-    setCart(remove);
+	let newCart = [];
+        cart.forEach(element => {
+        if(element.id!==id){
+			newCart.push(element)
+		}});
+        console.log(newCart);
+        setCart(newCart)
 	};
 
-	const emptyCart = () => setCart([]);
+	const emptyCart = () => {setCart([]);
+		this.props.history.push('/');
+	};
 
 	return (
 		<CartContext.Provider value={{cart, setCart, addCart, removeCart, emptyCart }}>
