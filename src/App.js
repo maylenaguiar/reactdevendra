@@ -6,12 +6,12 @@ import NavBar from "../src/components/NavBar/NavBar";
 import Home from '../src/components/Views/Home/Home';
 import { CartProvider } from '../src/components/Context/CartContext';
 import Cart from './components/Cart/Cart';
-// import Header from '../src/components/Header/Header'
+
 
 function App() {
   return (
     <CartProvider>
-    <Router> 
+    <Router>
     <div className="App">
       <NavBar />
     </div>

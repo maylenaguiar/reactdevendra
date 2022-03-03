@@ -12,7 +12,11 @@
   }
   
   .naveg{
-    margin: 20px;
-    list-style-type: none;
-   color: thistle;
+  margin: 20px;
+  list-style: none;
+  color: thistle;
+  }
+  .naveg:hover{
+    color: black;
+    padding: 3px;
   }

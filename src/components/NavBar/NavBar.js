@@ -9,7 +9,7 @@ const Navbar = () => {
   const { totalCart, cart } = useContext(CartContext);
   return ( 
       <nav className="container">
-      <ul className='naveg'>
+      <ul>
         <Link className='naveg' to='/'>Devendra</Link>
         <Link className='naveg' to='/category/sahumerios'>Sahumerios</Link>
         <Link className='naveg' to='/category/velas'>Velas</Link>

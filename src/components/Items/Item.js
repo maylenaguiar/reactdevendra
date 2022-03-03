@@ -10,8 +10,8 @@ const Item = ({ product }) => {
     <div className='producto'>
 					<img style ={{width:'150px'}}  src={product.img} alt='imagen'/>
 					<h3>{product.name}</h3>
-          <h4>${product.price}</h4>
-          <Link to =  {`/item/${product.id}`} > <button>Ver detalle</button> </Link>
+          <h4>Precio ${product.price}</h4>
+          <Link to =  {`/item/${product.id}`} > <button className='botonDetalle'>Ver detalle</button> </Link>
     </div> 
   )
 }

@@ -10,17 +10,17 @@ const Cart = () => {
         <>
         {
           totalCart(cart)>0 ?
-          <div><h1 className='compra'>Tu compra</h1>
+          <div className='compra'><h1>Tu compra</h1>
         {cart.map(element=><div className='elementoCarrito'>
-          <div>{element.qty} {element.name} por ${element.price} c/u</div>
+          <div>{element.qty} {element.name} por ${element.price} c/u </div>
           <button onClick={()=>{
-            removeCart(element.id)}}>X</button>
+            removeCart(element.id)}}> X</button>
           </div>)}
           <h2 className='elementoCarrito'>Total: ${getTotal(cart)}</h2>
         <Link to='/'>
         <button className='botonVaciar' onClick={()=>{emptyCart()}}>Vaciar carrito</button>
         </Link>
-        <Link to='/'> <button className='finalizar'>Finalizar compra</button>
+        <Link to='/'> <button className='finalizar' onClick={()=>{emptyCart()}}>Finalizar compra</button>
        </Link>
         </div>
          :

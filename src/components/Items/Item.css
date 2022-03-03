@@ -1,7 +1,21 @@
-.productos{
+.producto{
 display: flex;
 flex-direction: column;
 align-items: center;
 padding-top: 40px;
 padding-bottom: 50px;
+border: 3px solid;
+border-radius: 10%;
+width: 250px;
+height: 300px;
+text-align: center;
+}
+
+.botonDetalle{
+    color: beige;
+    background-color: purple;
+}
+.botonDetalle:hover{
+    color: black;
+    padding: 3px;
 }
