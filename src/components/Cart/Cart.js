@@ -19,13 +19,16 @@ const Cart = () => {
           <h2 className='elementoCarrito'>Total: ${getTotal(cart)}</h2>
         <Link to='/'>
         <button className='botonVaciar' onClick={()=>{emptyCart()}}>Vaciar carrito</button>
-        </Link></div> :
-        <div><h2>No hay productos en tu carrito</h2>
-        <Link to='/'><button>Volver el inicio</button>
+        </Link>
+        <Link to='/'> <button className='finalizar'>Finalizar compra</button>
+       </Link>
+        </div>
+         :
+        <div className='elementoCarrito'><h2>No hay productos en tu carrito</h2>
+        <Link to='/'><button className='elementoCarrito'>Volver al Home</button>
         </Link></div>
         }
-       <Link to='/'> <button className='finalizar'>Finalizar compra</button>
-       </Link></>
+       </>
     )
 }
 

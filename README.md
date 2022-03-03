@@ -6,6 +6,10 @@ Este proyecto es un E-Commerce sobre una tienda de sahumerios, bombas sahumadora
 
 Mui Materials
 
+# Base de datos
+
+Firebase
+
 
 # Getting Started with Create React App
 
