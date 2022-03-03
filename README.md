@@ -1,3 +1,12 @@
+# Proyecto
+
+Este proyecto es un E-Commerce sobre una tienda de sahumerios, bombas sahumadoras, velas aromáticas.
+
+# Librerías
+
+Mui Materials
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

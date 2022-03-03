@@ -4,9 +4,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import NavBar from "../src/components/NavBar/NavBar";
 import Home from '../src/components/Views/Home/Home';
-import ItemView from '../src/components/Views/ItemView/ItemView';
-import Category from '../src/components/Views/Category/Category';
-import { CartProvider } from '../src/components/CartContext/CartContext';
+import { CartProvider } from '../src/components/Context/CartContext';
 import Cart from './components/Cart/Cart';
 // import Header from '../src/components/Header/Header'
 
@@ -19,7 +17,7 @@ function App() {
     </div>
        <Routes>
        <Route path='/' element={<Home />}/>
-       <Route path='/category/:categoryId' element={<Category />}/>
+       <Route path='/category/:categoryId' element={<ItemListContainer />}/>
        <Route path='/item/:productId' element={<ItemDetailContainer />}/>
        <Route path='/Cart' element={<Cart />}/>
     </Routes>

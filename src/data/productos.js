@@ -9,7 +9,7 @@ export const products = [
     {
         id: 2,
         name: 'Bomba Sahumadora',
-        stock: 2,
+        stock: 5,
         price: 400,
         img: 'https://http2.mlstatic.com/D_NQ_NP_2X_650634-MLA45433830324_042021-F.webp'
     },

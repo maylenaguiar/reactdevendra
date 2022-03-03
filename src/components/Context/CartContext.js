@@ -8,14 +8,11 @@ export const CartProvider = ({ children }) => {
 	const addCart = (item, qty) => {
 		if (isInCart(item.id)) {
 			sumarQty(item.id, qty);
-		} else {item.qty =qty;
-			setCart([...cart, {...item, qty}])
- 		} 
+		} else {
+			setCart([...cart, {...item, qty}])} 
 	}; 
-	console.log(cart);
 	const isInCart = (id) => {
-		const validar = cart.some((producto)=> producto.id === id);
-		return validar;
+		return cart.some((producto)=> producto.id === id);
 	};
 	const sumarQty = (id, qty) => {
 		const cartCopy = [...cart]
@@ -29,7 +26,6 @@ export const CartProvider = ({ children }) => {
         if(element.id!==id){
 			newCart.push(element)
 		}});
-        console.log(newCart);
         setCart(newCart)
 	};
 
@@ -37,8 +33,20 @@ export const CartProvider = ({ children }) => {
 		this.props.history.push('/');
 	};
 
+	const totalCart = (cart)=>{
+		let totalQty = 0;
+		cart.forEach(e=>{totalQty+=e.qty})
+		return totalQty
+	};
+	const getTotal = () => {
+        let totalAmount = 0;
+        cart.forEach(e=>{let amountByProduct = e.qty*e.price;
+            totalAmount += amountByProduct})           
+            return totalAmount
+    }
+
 	return (
-		<CartContext.Provider value={{cart, setCart, addCart, removeCart, emptyCart }}>
+		<CartContext.Provider value={{cart, setCart, addCart, removeCart, emptyCart, totalCart, getTotal }}>
 			{children}
 		</CartContext.Provider>
 	);

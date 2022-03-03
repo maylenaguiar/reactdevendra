@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { traerProducto } from '../../data/productos';
 import ItemDetail from './ItemDetail';
 import { useContext } from 'react';
-import { CartContext } from '../CartContext/CartContext';
+import { CartContext } from '../Context/CartContext';
 import { useParams } from 'react-router-dom';
-
+import { getDoc, doc} from 'firebase/firestore';
+import { database } from '../../services/firebase/firebase';
  
 const ItemDetailContainer = () => {
 
@@ -13,20 +13,26 @@ const ItemDetailContainer = () => {
   let { productId } = useParams()
  
     useEffect(() => {
-        traerProducto(productId).then(item => {
-          setItem(item);
-          setLoading(false);
-        }).catch(error=> {
-        console.log(error);
+        setLoading(true)
+        const docRef = doc(database, 'products', productId)
+        getDoc(docRef).then(response =>{
+          const product = {id: response.id, ...response.data()}
+          setItem(product)
+        }).finally(() =>{
+          setLoading(false)
         })
-    }, []);
-    
-  return (
+  return (()=>{
+    setItem()
+  })
+  }, [productId])
+    return(
     <>
        {loading ?
         <p>Cargando detalle de producto.</p>
        :
-      <ItemDetail item={item} />
+       item ?
+      <ItemDetail item={item} /> :
+      <h2>El producto no existe</h2>
        }     
    </> 
   );

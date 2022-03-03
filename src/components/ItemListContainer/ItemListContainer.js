@@ -1,26 +1,33 @@
 import { useEffect, useState } from 'react';
-import { traerProductos } from '../../data/productos';
 import ItemCount from '../ItemCount/ItemCount';
 import ItemList from '../ItemList/ItemList';
 import './ItemListContainer.css';
+import { getDocs, collection, query, where } from 'firebase/firestore';
+import { database } from '../../services/firebase/firebase';
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
+  const { categoryId } = useParams();
 
     useEffect(() => {
-        traerProductos
-            .then((res) => {
-                setProducts(res);
-            })
-            .catch((error) => {
-                console.log(error);
-            })
-            .finally(() => {
-                setLoading(false);
-            });
-    }, []);
-  return( 
+    setLoading(true)
+    const collectionRef = categoryId ?  
+    query(collection(database, 'products'), where('category','==', categoryId)) :
+    collection(database, 'products')
+
+      getDocs(collectionRef).then(querySnapshot =>{
+           const products = querySnapshot.docs.map(doc =>{
+             return { id: doc.id, ...doc.data() }
+           })
+           setProducts(products)  
+          }).finally(()=>{
+            setLoading(false)
+          })
+        },[categoryId]);
+
+  return(
   <div>
   {loading ?(
     <h1>Cargando...</h1>
@@ -31,7 +38,6 @@ const ItemListContainer = () => {
   </>
   )}
 </div>
-  );
-};
+  )};
 
 export default ItemListContainer;
