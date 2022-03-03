@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget';
 import { useContext } from "react";
-import { CartContext } from "../Context/CartContext";
+import { CartContext } from "../../Context/CartContext";
 // import { Icon } from '@mui/material';
 
 const Navbar = () => {

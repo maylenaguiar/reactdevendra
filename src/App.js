@@ -4,7 +4,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import NavBar from "../src/components/NavBar/NavBar";
 import Home from '../src/components/Views/Home/Home';
-import { CartProvider } from '../src/components/Context/CartContext';
+import { CartProvider } from '../src/Context/CartContext';
 import Cart from './components/Cart/Cart';
 
 
