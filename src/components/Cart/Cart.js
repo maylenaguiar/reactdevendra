@@ -20,7 +20,7 @@ const Cart = () => {
         <Link to='/'>
         <button className='botonVaciar' onClick={()=>{emptyCart()}}>Vaciar carrito</button>
         </Link>
-        <Link to='/'> <button className='finalizar' onClick={()=>{emptyCart()}}>Finalizar compra</button>
+        <Link to='/'> <button className='finalizar' onClick={()=>{alert('Compra realizada con éxito');{emptyCart()}}}>Finalizar compra</button>
        </Link>
         </div>
          :
