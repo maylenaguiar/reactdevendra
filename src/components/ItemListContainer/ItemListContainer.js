@@ -33,7 +33,7 @@ const ItemListContainer = () => {
     <h1>Cargando...</h1>
   ) :(
     <>
-    <h2 className='titulo'>Hola amigxs de Devendra</h2>
+    <h2 className='titulo'>Devendra</h2>
   <ItemList products={products}/>
   </>
   )}

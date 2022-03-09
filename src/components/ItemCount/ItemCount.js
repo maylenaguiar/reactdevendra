@@ -18,9 +18,9 @@ const ItemCount = ({ onAdd }) => {
     <div>
             <h3>Cantidad</h3>
             <p>{counter}</p>
-            <button style={{width:'50px'}} onClick={counterUP}>+</button>
-            <button  onClick={()=>{onAdd(counter)}}> Agregar al carrito</button>
             <button style={{width:'50px'}} onClick ={counterDown}>-</button>
+            <button  onClick={()=>{onAdd(counter)}}> Agregar al carrito</button>
+            <button style={{width:'50px'}} onClick={counterUP}>+</button>
         </div>
   )
 }

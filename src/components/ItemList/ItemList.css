@@ -1,9 +1,10 @@
 .items{
     margin-top: 20px;
     margin-right: 20px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    
+    padding-bottom: 30px;
 }
