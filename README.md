@@ -4,28 +4,40 @@ Este proyecto es un E-Commerce sobre una tienda de sahumerios, bombas sahumadora
 
 # Tecnología principal
 
-[Create React App](https://github.com/facebook/create-react-app)
+ReactJS [Create React App](https://github.com/facebook/create-react-app)
 
 # Librería utilizada
 
-Mui Materials
+Mui Materials (https://mui.com/components/material-icons/)
 
 # Base de datos utilizada
 
-Firebase
+Firebase (https://firebase.google.com/)
 
 # Inicializar
 
-Descargar el código o forkea el repo.
-En tu consola, inicializa con npm start lo cual va a abrir el proyecto en tu http://localhost:3000
+Descargar el código o forkea el repositorio.
+En tu consola, inicializar con npm start lo cual va a abrir el proyecto en tu http://localhost:3000
 
 # Variables de entorno
 
+
+
+
 # Datos de categorías
+
+La tienda puede filtrar por dos categorías: Sahumerios y Velas.
 
 # Datos de productos
 
+Los productos poseen imágen, nombre, precio y stock.
+
 # Rutas y Componentes que renderiza
+
+La ruta home renderiza la totalidad de productos y una foto de portada.
+La ruta categoryId renderiza el componente ItemListContainer, es decir el listado de items de una categoría. 
+Además la ruta productId renderiza el ItemDetailContainer, es decir el detalle del producto.
+Por último, hay una ruta Cart que renderiza el carrito con y sin productos.
 
 # GIF
 (link y se pone en la carpeta del proyecto el video)

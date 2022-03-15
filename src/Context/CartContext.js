@@ -30,7 +30,7 @@ export const CartProvider = ({ children }) => {
 	};
 
 	const emptyCart = () => {setCart([]);
-		this.props.history.push('/');
+		// this.props.history.push('/');
 	};
 
 	const totalCart = (cart)=>{
