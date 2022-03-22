@@ -112,14 +112,14 @@ if(cart.length === 0) {
         {
            (contact.phone !== '' && contact.address !== '' && contact.comment !== '' && contact.name !== '') &&
                 
-           <div>
+           <div className='formCompleto'>
                <h4>Nombre: {contact.name}</h4>
                <h4>Telefono: {contact.phone}</h4>
                <h4>Direccion: {contact.address}</h4>
                <h4>Comentario: {contact.comment}</h4>
                <button onClick={() => setContact({ phone: '', address: '', comment: ''})} 
-                       className='Button' 
-                       style={{backgroundColor: '#db4025'}}>
+                       className='boton' 
+                       style={{backgroundColor: 'purple'}}>
                    Borrar datos de contacto
                </button>
            </div>    

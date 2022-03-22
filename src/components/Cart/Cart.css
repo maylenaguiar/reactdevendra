@@ -57,3 +57,17 @@ h1{
     background-color: thistle;
     padding: 10px;
 }
+.formCompleto{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.boton{
+    display: flex;
+    flex-direction: column;
+    color: beige;
+    background-color: purple;
+    padding: 1px;
+    margin-left: 40%;
+    margin-right: 40%;
+}

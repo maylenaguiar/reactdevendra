@@ -2,7 +2,14 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
     color: purple;
     padding: 1%;
     margin: 2%;
+}
+.button{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-left: 70%;
 }

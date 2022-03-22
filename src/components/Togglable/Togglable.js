@@ -1,4 +1,5 @@
 import { useState, useImperativeHandle, forwardRef } from 'react'
+import './Togglable.css';
 
 const Togglable = forwardRef((props, ref) => {
     const [visible, setVisible] = useState(false)
@@ -19,10 +20,10 @@ const Togglable = forwardRef((props, ref) => {
     return (
       <div>
         <div style={hideWhenVisible}>
-          <button className='Button' style={{backgroundColor: '#219c0b'}} onClick={toggleVisibility}>{props.buttonLabelShow}</button>
+          <button className='button' style={{backgroundColor: 'lightpink'}} onClick={toggleVisibility}>{props.buttonLabelShow}</button>
         </div>
         <div style={showWhenVisible}>
-          <button className='Button' style={{backgroundColor: '#db4025'}} onClick={toggleVisibility}>{props.buttonLabelHide ? props.buttonLabelHide : 'Cancelar'}</button>
+          <button className='button' style={{backgroundColor: 'purple'}} onClick={toggleVisibility}>{props.buttonLabelHide ? props.buttonLabelHide : 'Cancelar'}</button>
           {props.children}
         </div>
       </div>
