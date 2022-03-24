@@ -5,7 +5,6 @@ import Togglable from '../Togglable/Togglable';
 import ContactForm from '../ContactForm/ContactForm';
 import { writeBatch, getDocs, collection, addDoc, where, query, documentId } from 'firebase/firestore'
 import { database } from '../../services/firebase/firebase'
-// import { useNotificationServices } from '../../services/notification/NotificationServices';
 import './Cart.css';
 
 const Cart = () => {
@@ -20,8 +19,6 @@ const Cart = () => {
   const { totalCart, cart, emptyCart, removeCart, getTotal } = useContext(CartContext);
 
   const contactFormRef = useRef()
-
-//   const setNotification = useNotificationServices()
 
   const confirmOrder = () => {
     if(contact.phone !== '' && contact.address !== '' && contact.comment !== '' && contact.name !== '') {
@@ -53,25 +50,21 @@ if(outOfStock.length === 0) {
     addDoc(collection(database, 'orders'), objOrder).then(({id}) => { 
     batch.commit()
     emptyCart()
-    // setNotification('success', `La orden se genero exitosamente, su numero de orden es: ${id}`)
     alert(`La orden se genero exitosamente, su numero de orden es: ${id}`)
     
     })
     } else {
           outOfStock.forEach(prod => {
-        //   setNotification('error', `El producto ${prod.name} no tiene stock disponible`)
         alert(`El producto ${prod.name} no tiene stock disponible`)
           removeCart(prod.id)
                     })    
                 }               
             }).catch((error) => {
-                // setNotification('error', error)
                 alert('error')
             }).finally(() => {
                 setProcessingOrder(false)
             })
     } else {
-        //  setNotification('error', 'Debe completar los datos de contacto para generar la orden')
         alert('Debe completar los datos de contacto para generar la orden')
     }
 }

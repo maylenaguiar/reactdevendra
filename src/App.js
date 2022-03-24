@@ -6,12 +6,10 @@ import NavBar from "../src/components/NavBar/NavBar";
 import Home from '../src/components/Views/Home/Home';
 import { CartProvider } from '../src/Context/CartContext';
 import Cart from './components/Cart/Cart';
-import { NotificationServicesProvider } from '../src/services/notification/NotificationServices';
 
 
 function App() {
   return (
-    <NotificationServicesProvider>
     <CartProvider>
     <Router>
     <div className="App">
@@ -25,7 +23,6 @@ function App() {
     </Routes>
     </Router>
     </CartProvider>
-    </NotificationServicesProvider>
   );
 }
 

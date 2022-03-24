@@ -1,20 +1,29 @@
 import { NavLink } from "react-router-dom";
 import './NavBar.css';
 import CartWidget from '../CartWidget/CartWidget';
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../Context/CartContext";
-// import { Icon } from '@mui/material';
+import { getDocs , collection } from 'firebase/firestore';
+import { database } from '../../services/firebase/firebase'
+
 
 const Navbar = () => {
   const { totalCart, cart } = useContext(CartContext);
+  const [categories, setCategories] = useState([])
+
+    useEffect(()=>{
+        getDocs(collection(database, 'categories')).then(res => {
+            const categories = res.docs.map(cat=>{
+                return { id: cat.id, ...cat.data()}
+            })
+            setCategories(categories)
+        })
+    },[])
   return ( 
       <nav className="container">
-      <ul>
         <NavLink className='naveg' to='/'>Devendra</NavLink>
-        <NavLink className='naveg' to='/category/sahumerios'>Sahumerios</NavLink>
-        <NavLink className='naveg' to='/category/velas'>Velas</NavLink>
+        {categories.map(cat=> <NavLink key={cat.id} to={`/category/${cat.id}`} className='naveg'>{cat.name}</NavLink> )}
         {totalCart(cart)>0 && <CartWidget />}
-      </ul>
     </nav>
   );
 };
