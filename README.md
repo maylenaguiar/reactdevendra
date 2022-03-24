@@ -21,7 +21,13 @@ En tu consola, inicializar con npm start lo cual va a abrir el proyecto en tu ht
 
 # Variables de entorno
 
-
+REACT_APP_apiKey=AIzaSyB6yDrAF1d0Iqh7NEA1Vq-4f4u25be2Cd4
+REACT_APP_authDomain=devendra-f542c.firebaseapp.com
+REACT_APP_projectId=devendra-f542c
+REACT_APP_storageBucket=devendra-f542c.appspot.com
+REACT_APP_messagingSenderId=370753655185
+REACT_APP_appId=1:370753655185:web:1201116ea8982a763c0a30
+REACT_APP_measurementId=G-882ER5X4MB
 
 
 # Datos de categorías
@@ -36,7 +42,7 @@ Los productos poseen imágen, nombre, precio y stock.
 
 La ruta home renderiza la totalidad de productos y una foto de portada.
 La ruta categoryId renderiza el componente ItemListContainer, es decir el listado de items de una categoría. 
-Además la ruta productId renderiza el ItemDetailContainer, es decir el detalle del producto.
+Además la ruta productId renderiza el componente ItemDetailContainer, es decir el detalle del producto.
 Por último, hay una ruta Cart que renderiza el carrito con y sin productos.
 
 # GIF
