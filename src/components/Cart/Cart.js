@@ -65,7 +65,7 @@ if(outOfStock.length === 0) {
                 setProcessingOrder(false)
             })
     } else {
-        alert('Debe completar los datos de contacto para generar la orden')
+        alert('Debe completar los datos del formulario para generar la orden')
     }
 }
 if(processingOrder) {
@@ -94,7 +94,7 @@ if(cart.length === 0) {
         <Link to='/'>
         <button className='botonVaciar' onClick={()=>{emptyCart()}}>Cancelar compra</button>
         </Link>
-        <Link to='/'> <button className='finalizar' onClick={() => confirmOrder() }>Confirmar compra</button>
+        <Link to= {(contact.phone !== '' && contact.address !== '' && contact.comment !== '' && contact.name !== '') ? '/': '/cart'}> <button className='finalizar' onClick={() => confirmOrder() }>Confirmar compra</button>
        </Link>
         </div>
          :
