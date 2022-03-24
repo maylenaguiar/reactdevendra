@@ -128,5 +128,4 @@ if(cart.length === 0) {
        </>
     )
 }
-
 export default Cart
