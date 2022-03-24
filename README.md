@@ -2,15 +2,15 @@
 
 Este proyecto es un E-Commerce sobre una tienda de sahumerios, bombas sahumadoras, velas aromáticas.
 
-# Tecnología principal
+## Tecnología principal
 
 ReactJS [Create React App](https://github.com/facebook/create-react-app)
 
-# Librería utilizada
+### Librería utilizada
 
 Mui Materials (https://mui.com/components/material-icons/)
 
-# Base de datos utilizada
+### Base de datos utilizada
 
 Firebase (https://firebase.google.com/)
 
@@ -30,24 +30,24 @@ REACT_APP_appId=1:370753655185:web:1201116ea8982a763c0a30
 REACT_APP_measurementId=G-882ER5X4MB
 
 
-# Datos de categorías
+## Datos de categorías
 
 La tienda puede filtrar por dos categorías: Sahumerios y Velas.
 
-# Datos de productos
+## Datos de productos
 
 Los productos poseen imágen, nombre, precio y stock.
 
-# Rutas y Componentes que renderiza
+## Rutas y Componentes que renderiza
 
 La ruta home renderiza la totalidad de productos y una foto de portada.
 La ruta categoryId renderiza el componente ItemListContainer, es decir el listado de items de una categoría. 
 Además la ruta productId renderiza el componente ItemDetailContainer, es decir el detalle del producto.
 Por último, hay una ruta Cart que renderiza el carrito con y sin productos.
 
-# GIF
-(link y se pone en la carpeta del proyecto el video)
+## Video demostrativo del sitio
 
+https://github.com/maylenaguiar/reactdevendra/blob/main/public/Devendra.gif
 
 ## Learn More
 

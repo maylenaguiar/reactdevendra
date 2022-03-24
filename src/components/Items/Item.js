@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 import './Item.css';
 
  
